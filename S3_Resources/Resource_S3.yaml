@@ -1,0 +1,21 @@
+--- #says we are starting a new yaml document
+AWSTemplateFormatVersion: "2010-09-09"
+Description: Cloudformation template to create S3 bucket
+Resources:
+  S3bucket01:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: demobucket22339
+  EC2Instance01:
+    Type: AWS::EC2::Instance
+    Properties:
+      ImageId: ami-0230bd60aa48260c6
+      InstanceType: t2.micro
+  VPC01:
+    Type: AWS::EC2::VPC
+    Properties:
+      CidrBlock: 10.0.0.0/16
+      EnableDnsHostnames: True
+      Tags:
+        - Key: Name
+          Value: Production
