@@ -10,7 +10,7 @@ Resources:
         - Key: Ansible Machine
           Value: Production
       UserData: 
-        Fn::Base:64:
+        Fn::Base64:
           #!/bin/bash
           sudo apt-get update
           sudo apt-get install -y ansible
@@ -23,7 +23,7 @@ Resources:
         - Key: Ansible Machine
           Value: Production
       UserData: 
-        Fn::Base:64:
+        Fn::Base64:
           #!/bin/bash
           sudo apt-get update
           sudo apt-get install -y ansible
