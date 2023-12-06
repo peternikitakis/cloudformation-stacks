@@ -4,6 +4,7 @@ Resources:
   Server1:
     Type: AWS::EC2::Instance
     Properties:
+      KeyName: ansible-machines.pem
       ImageId: ami-0fc5d935ebf8bc3bc
       InstanceType: t2.micro
       Tags:
@@ -17,6 +18,7 @@ Resources:
   Server2:
     Type: AWS::EC2::Instance
     Properties:
+      KeyName: ansible-machines.pem
       ImageId: ami-0fc5d935ebf8bc3bc
       InstanceType: t2.micro
       Tags:
