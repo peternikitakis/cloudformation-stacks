@@ -29,3 +29,21 @@ Resources:
           #!/bin/bash
           sudo apt-get update
           sudo apt-get install -y ansible
+  ServerSecurity: 
+    Type: AWS::EC2::SecurityGroup
+    Properties: 
+      GroupDescription: My security group to allow access on ports 80 and 22
+      GroupName: MyAnsibleSG
+      SecurityGroupIngress: 
+        - IpProtocol: tcp
+          FromPort: 80
+          ToPort: 80
+          CidrIp: 0.0.0.0/0
+        - IpProtocol: tcp
+          FromPort: 22
+          ToPort: 22
+          CidrIp: 192.168.146.131/24
+      Tags: 
+        - Key: SG
+          Value: MyAnsibleSG
+      VpcId: vpc-0a4ccbba02c46da2b
