@@ -1,30 +1,29 @@
 AWSTemplateFormatVersion: "2010-09-09"
 Description: To launch three virtual machines I can deploy playbooks on
-Resources: 
-  Server1: 
+Resources:
+  Server1:
     Type: AWS::EC2::Instance
     Properties:
       ImageId: ami-0fc5d935ebf8bc3bc
       InstanceType: t2.micro
-      Tags: 
+      Tags:
         - Key: Ansible Machine
           Value: Production
-      UserData: 
+      UserData:
         Fn::Base64:
           #!/bin/bash
           sudo apt-get update
           sudo apt-get install -y ansible
-  Server2: 
+  Server2:
     Type: AWS::EC2::Instance
     Properties:
       ImageId: ami-0fc5d935ebf8bc3bc
       InstanceType: t2.micro
-      Tags: 
+      Tags:
         - Key: Ansible Machine
           Value: Production
-      UserData: 
+      UserData:
         Fn::Base64:
           #!/bin/bash
           sudo apt-get update
           sudo apt-get install -y ansible
-        
