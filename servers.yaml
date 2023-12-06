@@ -42,7 +42,7 @@ Resources:
         - IpProtocol: tcp
           FromPort: 22
           ToPort: 22
-          CidrIp: 192.168.146.131/24
+          CidrIp: 0.0.0.0/0
       Tags: 
         - Key: SG
           Value: MyAnsibleSG
