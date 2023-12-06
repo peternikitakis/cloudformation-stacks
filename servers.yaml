@@ -4,7 +4,7 @@ Resources:
   MyServer1:
     Type: AWS::EC2::Instance
     Properties:
-      KeyName: practice-servers.pem
+      KeyName: practice-servers
       ImageId: ami-0fc5d935ebf8bc3bc
       InstanceType: t2.medium
       Tags:
@@ -18,7 +18,7 @@ Resources:
   MyServer2:
     Type: AWS::EC2::Instance
     Properties:
-      KeyName: practice-servers.pem
+      KeyName: practice-servers
       ImageId: ami-0fc5d935ebf8bc3bc
       InstanceType: t2.medium
       Tags:
